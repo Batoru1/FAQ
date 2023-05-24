@@ -36,6 +36,19 @@ body {
   text-transform: capitalize;
 }
 
+.question-btn {
+  background-color: transparent;
+  color: rgb(145, 119, 169);
+  border-style: none;
+  font-size: x-large;
+  transition: transform 0.3s ease;
+}
+
+.question-btn:hover {
+  cursor: move;
+  transform: rotate(90deg);
+}
+
 /* hide-show txt */
 .question-txt {
   font-size: smaller;
@@ -48,18 +61,14 @@ body {
   display: block;
 }
 
-.question-btn {
-  background-color: transparent;
-  color: rgb(145, 119, 169);
-  border-color: rgb(145, 119, 169);
-  border-radius: 0.5vw;
-  border-style: solid;
-}
-
-.question-btn:hover {
-  cursor: move;
-}
-
 .minus-btn {
+  display: none;
+}
+
+.show-txt.minus-btn {
+  display: inline;
+}
+
+.show-txt.plus-btn {
   display: none;
 }
