@@ -1,6 +1,6 @@
 /* font style */
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Sigmar&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap'); /* import fonts from Google Fonts*/
 
 body {
   font-family: 'Pangolin', cursive;
@@ -21,19 +21,24 @@ body {
 }
 
 .question {
-  min-width: 30vw;
-  width: 50vw;
+  min-width: 30vw; /*the container's width will shrink to fit the content no more than 30vw*/
   background-color: rgb(214, 214, 203);
   padding: 2vw;
   margin-bottom: 3vw;
   border-radius: 1vw;
-  box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2vh 4vw /* Horizontal offset, Vertical offset, Blur radius */
+    rgba(0, 0, 0, 0.2); /* Color and opacity */
+  padding-left: 4vw;
 }
 
 .question-title {
   display: flex;
   justify-content: space-between;
   text-transform: capitalize;
+}
+
+.question-title p {
+  padding-right: 7vw; /* so the btn is not to close to the text*/
 }
 
 .question-btn {
@@ -51,13 +56,15 @@ body {
 
 /* hide-show txt */
 .question-txt {
+  display: none;
   font-size: smaller;
   opacity: 0.5;
   font-family: 'Open Sans', sans-serif;
-  display: none;
+  border-top: 0.2vw solid rgba(0, 0, 0, 0.2);
 }
 
-.show-txt.question-txt {
+.show-txt .question-txt {
+  /* spacebar(gap) is needed after txt to target the correct bested element...*/
   display: block;
 }
 
@@ -65,10 +72,12 @@ body {
   display: none;
 }
 
-.show-txt.minus-btn {
+.show-txt .minus-btn {
+  /* spacebar(gap) is needed after txt to target the correct bested element...*/
   display: inline;
 }
 
-.show-txt.plus-btn {
+.show-txt .plus-btn {
+  /* spacebar(gap) is needed after txt to target the correct bested element...*/
   display: none;
 }
